@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LinkedIn Auto Engage</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="gradient-bg">
+  <div class="min-h-full flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl p-6 w-full max-w-sm relative">
+      
+      <!-- Header -->
+      <div class="text-center mb-6">
+        <div class="floating-icon mb-4">
+          <div class="linkedin-icon w-12 h-12 mx-auto flex items-center justify-center">
+            in
+          </div>
+        </div>
+        <h1 class="text-2xl font-bold text-white mb-1">LinkedIn Auto Engage</h1>
+        <p class="text-blue-100 text-sm opacity-90">Boost your network engagement</p>
+      </div>
+
+      <!-- Form -->
+      <div class="space-y-4 mb-6">
+        <div class="space-y-2">
+          <label for="likeCount" class="block text-white font-medium text-sm">
+            👍 Likes to Give
+          </label>
+          <input 
+            type="number" 
+            id="likeCount" 
+            min="1" 
+            max="50"
+            placeholder="e.g., 10"
+            class="input-field w-full px-4 py-3 rounded-xl border-0 focus:outline-none text-gray-800 font-medium"
+          />
+        </div>
+
+        <div class="space-y-2">
+          <label for="commentCount" class="block text-white font-medium text-sm">
+            💬 Comments to Post
+          </label>
+          <input 
+            type="number" 
+            id="commentCount" 
+            min="1" 
+            max="20"
+            placeholder="e.g., 5"
+            class="input-field w-full px-4 py-3 rounded-xl border-0 focus:outline-none text-gray-800 font-medium"
+          />
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <button 
+        id="engageBtn" 
+        disabled
+        class="btn-primary w-full text-white font-semibold py-4 px-6 rounded-xl focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50 relative overflow-hidden">
+        <span id="btnText">Start Engaging</span>
+        <div id="loadingIndicator" class="loading-dots hidden flex justify-center space-x-1">
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+          <div class="w-2 h-2 bg-white rounded-full"></div>
+        </div>
+      </button>
+
+      <!-- Footer -->
+      <div class="flex justify-center mt-4 space-x-1">
+        <div class="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
+        <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+        <div class="w-2 h-2 bg-indigo-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./popup.js"></script>
+</body>
+</html>
