@@ -24,7 +24,7 @@ linkedin-auto-engagement-extension/
 ├── content.js
 ├── style.css
 └── icons/
-
+```
 ---
 
 ## 🧪 How It Works
